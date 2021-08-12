@@ -103,16 +103,17 @@ const searchInFields = () => {
   // 
   // If the query is empty, then display all data again.
   // 
+
 	dataFiltered = data.filter((instance_data) => {
-  	if (instance_data.name.includes(query)){
+  	if (instance_data.name.toLowerCase().includes(query.toLowerCase())){
     		return true;
     }
     
-    if (instance_data.power.includes(query)){
+    if (instance_data.power.toLowerCase().includes(query.toLowerCase())){
     		return true;
     }
     
-    if (instance_data.rank.includes(query)){
+    if (instance_data.rank.toLowerCase().includes(query.toLowerCase())){
     		return true;
     }
   })
